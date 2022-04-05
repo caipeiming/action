@@ -25,10 +25,12 @@ jobs:
         name=${drive%.md}
         mkdir download
         cd download
+        df -lh
         pwd
         echo $url
         echo $name
         curl -Lo "$name" "$url"
+        # wget -c -t 0 -O "$name" "$url"
         curl --user "394912998@qq.com:aj4qt8htr95ccazh" -T "$name" "https://dav.jianguoyun.com/dav/test/"
       env: 
         url: ${{ secrets.url }}
