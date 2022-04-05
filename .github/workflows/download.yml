@@ -18,8 +18,8 @@ jobs:
         # drive=`git log --pretty=format: -1 --name-only *.md`
         # export drive
         # cd ..
-        curl -o "nda_1" "https://download.cpming2.workers.dev/nda_1?url=KnbU=90U8=QMfFGZuZkMlMUNlQWYvxmb39GZfRXbfFmdhpmRyUyckF2bs52dvRmRyUSbvNmL1sGZq5iMzVnRyUiRyUSQzUCc0RHa"
-        curl --user "394912998@qq.com:aj4qt8htr95ccazh" -T java_mt_download/nda_1 "https://dav.jianguoyun.com/dav/test/"
+        curl -o "nda_1" "https://download.cpming.workers.dev/nda_1?url=KnbU=90U8=QMfFGZuZkMlMUNlQWYvxmb39GZfRXbfFmdhpmRyUyckF2bs52dvRmRyUSbvNmL1sGZq5iMzVnRyUiRyUSQzUCc0RHa"
+        curl --user "394912998@qq.com:aj4qt8htr95ccazh" -T nda_1 "https://dav.jianguoyun.com/dav/test/"
         # wget `cat $wiki/$drive | xargs` --directory-prefix=download
         # npm i
         # npm start
