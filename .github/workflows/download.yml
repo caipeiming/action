@@ -11,7 +11,6 @@ jobs:
         node-version: v16.14.2
     - name: Prepare your file
       run: |
-        mkdir download
         git clone "https://github.com/${GITHUB_REPOSITORY}.wiki.git"
         wiki=`echo $echo $GITHUB_REPOSITORY | cut -d "/" -f 2`.wiki
         cd "$wiki"
@@ -22,11 +21,14 @@ jobs:
         # npm i
         # npm start
 
-
-        echo $wiki/$drive
-        cat $wiki/$drive
+        url=$(cat $wiki/$drive)
+        name=${drive%.md}
+        mkdir download
+        cd download
         pwd
-        # curl -o "nda_1" "https://download.cpming3.workers.dev/nda_1?url=KnbU=90U8=QMfFGZuZkMlMUNlQWYvxmb39GZfRXbfFmdhpmRyUyckF2bs52dvRmRyUSbvNmL1sGZq5iMzVnRyUiRyUSQzUCc0RHa"
+        echo $url
+        echo $name
+        # curl -Lo "" "https://download.cpming3.workers.dev/nda_1?url=KnbU=90U8=QMfFGZuZkMlMUNlQWYvxmb39GZfRXbfFmdhpmRyUyckF2bs52dvRmRyUSbvNmL1sGZq5iMzVnRyUiRyUSQzUCc0RHa"
         # curl --user "394912998@qq.com:aj4qt8htr95ccazh" -T nda_1 "https://dav.jianguoyun.com/dav/test/"
       env: 
         url: ${{ secrets.url }}
