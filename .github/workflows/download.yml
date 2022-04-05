@@ -5,10 +5,10 @@ jobs:
   downloading:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
-    - uses: actions/setup-node@v2.1.1
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3.0.0
       with: 
-        node-version: v14.3.0  
+        node-version: v16.14.2
     - name: Prepare your file
       run: |
         mkdir download
