@@ -27,6 +27,7 @@ jobs:
         cd download
         df -lh
         pwd
+        ls -lh
         echo $url
         echo $name
         curl -Lo "$name" "$url"
