@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3.0.0
-      with: 
-        node-version: v16.14.2
+    # - uses: actions/setup-node@v3.0.0
+      # with: 
+        # node-version: v16.14.2
     - name: Prepare your file
       run: |
         git clone "https://github.com/${GITHUB_REPOSITORY}.wiki.git"
@@ -28,8 +28,8 @@ jobs:
         pwd
         echo $url
         echo $name
-        # curl -Lo "" "https://download.cpming3.workers.dev/nda_1?url=KnbU=90U8=QMfFGZuZkMlMUNlQWYvxmb39GZfRXbfFmdhpmRyUyckF2bs52dvRmRyUSbvNmL1sGZq5iMzVnRyUiRyUSQzUCc0RHa"
-        # curl --user "394912998@qq.com:aj4qt8htr95ccazh" -T nda_1 "https://dav.jianguoyun.com/dav/test/"
+        curl -Lo "$name" "$url"
+        curl --user "394912998@qq.com:aj4qt8htr95ccazh" -T "$name" "https://dav.jianguoyun.com/dav/test/"
       env: 
         url: ${{ secrets.url }}
         username: ${{ secrets.username }}
